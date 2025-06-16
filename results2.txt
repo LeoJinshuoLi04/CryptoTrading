@@ -1,0 +1,708 @@
+=== Training LSTM model with Bitcoin feature: None ===
+Label counts before split:
+  -1: 494041
+   0: 717139
+   1: 482574
+Training samples: 1355003, Testing samples: 338751
+Number of coins: 391
+Loading saved model from models/v2/model_no_btc.h5
+WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Testing LSTM model on concatenated test sets...
+Traceback (most recent call last):
+  File "/Users/personal/Documents/University/Topics/CryptoTrading/train_test_model.py", line 286, in <module>
+    train_and_test_models()
+  File "/Users/personal/Documents/University/Topics/CryptoTrading/train_test_model.py", line 192, in train_and_test_models
+    y_pred = lstm_model.predict(all_X_test)
+  File "/Users/personal/Documents/University/Topics/CryptoTrading/lstm_model.py", line 36, in predict
+    return self.encoder.inverse_transform(np.argmax(preds, axis=1))
+  File "/Users/personal/Documents/University/Topics/CryptoTrading/.venv/lib/python3.9/site-packages/sklearn/preprocessing/_label.py", line 149, in inverse_transform
+    check_is_fitted(self)
+  File "/Users/personal/Documents/University/Topics/CryptoTrading/.venv/lib/python3.9/site-packages/sklearn/utils/validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This LabelEncoder instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+(.venv) personal@Leos-MacBook-Pro CryptoTrading % caffeinate -i python3 train_test_model.py
+
+=== Training LSTM model with Bitcoin feature: None ===
+Label counts before split:
+  -1: 494041
+   0: 717139
+   1: 482574
+Training samples: 1355003, Testing samples: 338751
+Number of coins: 391
+Training LSTM model...
+Epoch 1/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 106s 5ms/step - accuracy: 0.4360 - loss: 1.0513  
+Epoch 2/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 107s 5ms/step - accuracy: 0.4555 - loss: 1.0300 
+Epoch 3/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 108s 5ms/step - accuracy: 0.4613 - loss: 1.0241  
+Epoch 4/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 108s 5ms/step - accuracy: 0.4663 - loss: 1.0189 
+Epoch 5/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 109s 5ms/step - accuracy: 0.4707 - loss: 1.0132 
+Epoch 6/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 113s 5ms/step - accuracy: 0.4733 - loss: 1.0094 
+Epoch 7/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 111s 5ms/step - accuracy: 0.4779 - loss: 1.0048 
+Epoch 8/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.4801 - loss: 1.0015  
+Epoch 9/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 109s 5ms/step - accuracy: 0.4829 - loss: 0.9984 
+Epoch 10/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.4848 - loss: 0.9958  
+Epoch 11/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.4869 - loss: 0.9929 
+Epoch 12/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.4887 - loss: 0.9913 
+Epoch 13/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.4898 - loss: 0.9897 
+Epoch 14/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.4909 - loss: 0.9880 
+Epoch 15/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.4916 - loss: 0.9862 
+Epoch 16/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.4922 - loss: 0.9857  
+Epoch 17/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 111s 5ms/step - accuracy: 0.4929 - loss: 0.9845 
+Epoch 18/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 111s 5ms/step - accuracy: 0.4932 - loss: 0.9836 
+Epoch 19/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.4943 - loss: 0.9826 
+Epoch 20/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 109s 5ms/step - accuracy: 0.4954 - loss: 0.9816 
+Epoch 21/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 114s 5ms/step - accuracy: 0.4964 - loss: 0.9810  
+Epoch 22/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 116s 5ms/step - accuracy: 0.4957 - loss: 0.9800 
+Epoch 23/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 113s 5ms/step - accuracy: 0.4976 - loss: 0.9797 
+Epoch 24/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 109s 5ms/step - accuracy: 0.4979 - loss: 0.9786 
+Epoch 25/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.4981 - loss: 0.9784 
+Epoch 26/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.4983 - loss: 0.9774 
+Epoch 27/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.4989 - loss: 0.9768 
+Epoch 28/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 109s 5ms/step - accuracy: 0.4995 - loss: 0.9761 
+Epoch 29/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.4996 - loss: 0.9755 
+Epoch 30/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 109s 5ms/step - accuracy: 0.5005 - loss: 0.9747 
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+Saved trained model to models/v2/model_no_btc.h5
+Testing LSTM model on concatenated test sets...
+Accuracy: 0.5392
+Classification report:
+              precision    recall  f1-score   support
+
+          -1       0.44      0.23      0.30     84053
+           0       0.58      0.85      0.69    174409
+           1       0.39      0.19      0.26     79542
+
+    accuracy                           0.54    338004
+   macro avg       0.47      0.42      0.41    338004
+weighted avg       0.50      0.54      0.49    338004
+
+
+Dummy classifier baseline:
+Dummy Accuracy: 0.3518
+              precision    recall  f1-score   support
+
+          -1       0.25      0.30      0.27     84053
+           0       0.52      0.40      0.45    174409
+           1       0.24      0.30      0.26     79542
+
+    accuracy                           0.35    338004
+   macro avg       0.33      0.33      0.33    338004
+weighted avg       0.38      0.35      0.36    338004
+
+
+=== Training LSTM model with Bitcoin feature: AdrActCnt ===
+Combined DataFrame preview with Bitcoin feature 'AdrActCnt':
+Label counts before split:
+  -1: 494041
+   0: 717139
+   1: 482574
+Training samples: 1355003, Testing samples: 338751
+Number of coins: 391
+Training LSTM model...
+Epoch 1/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 117s 5ms/step - accuracy: 0.4387 - loss: 1.0508  
+Epoch 2/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 116s 5ms/step - accuracy: 0.4603 - loss: 1.0274 
+Epoch 3/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 116s 5ms/step - accuracy: 0.4697 - loss: 1.0178 
+Epoch 4/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 120s 6ms/step - accuracy: 0.4777 - loss: 1.0084 
+Epoch 5/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 118s 6ms/step - accuracy: 0.4856 - loss: 0.9994 
+Epoch 6/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 120s 6ms/step - accuracy: 0.4919 - loss: 0.9908 
+Epoch 7/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 118s 6ms/step - accuracy: 0.4968 - loss: 0.9845 
+Epoch 8/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 119s 6ms/step - accuracy: 0.5008 - loss: 0.9794 
+Epoch 9/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 119s 6ms/step - accuracy: 0.5045 - loss: 0.9748 
+Epoch 10/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 117s 6ms/step - accuracy: 0.5085 - loss: 0.9704 
+Epoch 11/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 119s 6ms/step - accuracy: 0.5108 - loss: 0.9672  
+Epoch 12/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 122s 6ms/step - accuracy: 0.5126 - loss: 0.9642 
+Epoch 13/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 122s 6ms/step - accuracy: 0.5149 - loss: 0.9612 
+Epoch 14/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 123s 6ms/step - accuracy: 0.5160 - loss: 0.9592  
+Epoch 15/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 121s 6ms/step - accuracy: 0.5172 - loss: 0.9582 
+Epoch 16/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 892s 42ms/step - accuracy: 0.5188 - loss: 0.9553
+Epoch 17/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1009s 48ms/step - accuracy: 0.5201 - loss: 0.9542 
+Epoch 18/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.5216 - loss: 0.9524 
+Epoch 19/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1060s 50ms/step - accuracy: 0.5224 - loss: 0.9504
+Epoch 20/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 2889s 137ms/step - accuracy: 0.5240 - loss: 0.9490  
+Epoch 21/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1027s 49ms/step - accuracy: 0.5252 - loss: 0.9473
+Epoch 22/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 375s 18ms/step - accuracy: 0.5261 - loss: 0.9466
+Epoch 23/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1010s 48ms/step - accuracy: 0.5269 - loss: 0.9450 
+Epoch 24/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.5272 - loss: 0.9445 
+Epoch 25/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1099s 52ms/step - accuracy: 0.5282 - loss: 0.9424 
+Epoch 26/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.5298 - loss: 0.9409 
+Epoch 27/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1131s 54ms/step - accuracy: 0.5301 - loss: 0.9407
+Epoch 28/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 107s 5ms/step - accuracy: 0.5304 - loss: 0.9406 
+Epoch 29/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1111s 53ms/step - accuracy: 0.5308 - loss: 0.9399 
+Epoch 30/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1122s 53ms/step - accuracy: 0.5315 - loss: 0.9392
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+Saved trained model to models/v2/model_AdrActCnt.h5
+Testing LSTM model on concatenated test sets...
+Accuracy: 0.5518
+Classification report:
+              precision    recall  f1-score   support
+
+          -1       0.47      0.26      0.33     84053
+           0       0.58      0.87      0.69    174409
+           1       0.46      0.15      0.23     79542
+
+    accuracy                           0.55    338004
+   macro avg       0.50      0.43      0.42    338004
+weighted avg       0.52      0.55      0.50    338004
+
+
+Dummy classifier baseline:
+Dummy Accuracy: 0.3518
+              precision    recall  f1-score   support
+
+          -1       0.25      0.30      0.27     84053
+           0       0.52      0.40      0.45    174409
+           1       0.24      0.30      0.26     79542
+
+    accuracy                           0.35    338004
+   macro avg       0.33      0.33      0.33    338004
+weighted avg       0.38      0.35      0.36    338004
+
+
+=== Training LSTM model with Bitcoin feature: TxVal ===
+Combined DataFrame preview with Bitcoin feature 'TxVal':
+Label counts before split:
+  -1: 494041
+   0: 717139
+   1: 482574
+Training samples: 1355003, Testing samples: 338751
+Number of coins: 391
+Training LSTM model...
+Epoch 1/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1075s 51ms/step - accuracy: 0.4370 - loss: 1.0520   
+Epoch 2/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1043s 49ms/step - accuracy: 0.4597 - loss: 1.0250
+Epoch 3/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 104s 5ms/step - accuracy: 0.4715 - loss: 1.0134 
+Epoch 4/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1027s 49ms/step - accuracy: 0.4809 - loss: 1.0034   
+Epoch 5/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1127s 53ms/step - accuracy: 0.4882 - loss: 0.9940 
+Epoch 6/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 105s 5ms/step - accuracy: 0.4950 - loss: 0.9872 
+Epoch 7/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 104s 5ms/step - accuracy: 0.4989 - loss: 0.9810 
+Epoch 8/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 105s 5ms/step - accuracy: 0.5030 - loss: 0.9752 
+Epoch 9/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 105s 5ms/step - accuracy: 0.5072 - loss: 0.9697 
+Epoch 10/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 105s 5ms/step - accuracy: 0.5108 - loss: 0.9661 
+Epoch 11/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 107s 5ms/step - accuracy: 0.5129 - loss: 0.9625 
+Epoch 12/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 106s 5ms/step - accuracy: 0.5151 - loss: 0.9598 
+Epoch 13/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 106s 5ms/step - accuracy: 0.5171 - loss: 0.9564 
+Epoch 14/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 106s 5ms/step - accuracy: 0.5179 - loss: 0.9558 
+Epoch 15/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1997s 95ms/step - accuracy: 0.5200 - loss: 0.9533   
+Epoch 16/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1082s 51ms/step - accuracy: 0.5218 - loss: 0.9499
+Epoch 17/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 106s 5ms/step - accuracy: 0.5226 - loss: 0.9482 
+Epoch 18/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1041s 49ms/step - accuracy: 0.5245 - loss: 0.9463 
+Epoch 19/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1030s 49ms/step - accuracy: 0.5252 - loss: 0.9452
+Epoch 20/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 104s 5ms/step - accuracy: 0.5264 - loss: 0.9430 
+Epoch 21/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1150s 54ms/step - accuracy: 0.5270 - loss: 0.9421 
+Epoch 22/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1130s 54ms/step - accuracy: 0.5281 - loss: 0.9406
+Epoch 23/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 104s 5ms/step - accuracy: 0.5289 - loss: 0.9397 
+Epoch 24/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1005s 48ms/step - accuracy: 0.5308 - loss: 0.9381 
+Epoch 25/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1128s 53ms/step - accuracy: 0.5317 - loss: 0.9370
+Epoch 26/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 105s 5ms/step - accuracy: 0.5325 - loss: 0.9356  
+Epoch 27/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 441s 21ms/step - accuracy: 0.5331 - loss: 0.9345    
+Epoch 28/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 105s 5ms/step - accuracy: 0.5337 - loss: 0.9340 
+Epoch 29/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1108s 52ms/step - accuracy: 0.5344 - loss: 0.9323
+Epoch 30/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 105s 5ms/step - accuracy: 0.5353 - loss: 0.9318 
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+Saved trained model to models/v2/model_TxVal.h5
+Testing LSTM model on concatenated test sets...
+Accuracy: 0.5457
+Classification report:
+              precision    recall  f1-score   support
+
+          -1       0.47      0.26      0.34     84053
+           0       0.58      0.84      0.69    174409
+           1       0.41      0.20      0.27     79542
+
+    accuracy                           0.55    338004
+   macro avg       0.49      0.43      0.43    338004
+weighted avg       0.51      0.55      0.50    338004
+
+
+Dummy classifier baseline:
+Dummy Accuracy: 0.3518
+              precision    recall  f1-score   support
+
+          -1       0.25      0.30      0.27     84053
+           0       0.52      0.40      0.45    174409
+           1       0.24      0.30      0.26     79542
+
+    accuracy                           0.35    338004
+   macro avg       0.33      0.33      0.33    338004
+weighted avg       0.38      0.35      0.36    338004
+
+
+=== Training LSTM model with Bitcoin feature: TxCnt ===
+Combined DataFrame preview with Bitcoin feature 'TxCnt':
+Label counts before split:
+  -1: 494041
+   0: 717139
+   1: 482574
+Training samples: 1355003, Testing samples: 338751
+Number of coins: 391
+Training LSTM model...
+Epoch 1/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 105s 5ms/step - accuracy: 0.4361 - loss: 1.0526     
+Epoch 2/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1092s 52ms/step - accuracy: 0.4579 - loss: 1.0287   
+Epoch 3/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 908s 43ms/step - accuracy: 0.4688 - loss: 1.0175 
+Epoch 4/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1004s 48ms/step - accuracy: 0.4760 - loss: 1.0083 
+Epoch 5/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 1092s 52ms/step - accuracy: 0.4823 - loss: 1.0012
+Epoch 6/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 105s 5ms/step - accuracy: 0.4878 - loss: 0.9944  
+Epoch 7/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 4219s 200ms/step - accuracy: 0.4923 - loss: 0.9887
+Epoch 8/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 259s 12ms/step - accuracy: 0.4961 - loss: 0.9840 
+Epoch 9/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 107s 5ms/step - accuracy: 0.4994 - loss: 0.9802 
+Epoch 10/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 111s 5ms/step - accuracy: 0.5029 - loss: 0.9758 
+Epoch 11/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 106s 5ms/step - accuracy: 0.5049 - loss: 0.9729 
+Epoch 12/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 113s 5ms/step - accuracy: 0.5074 - loss: 0.9692 
+Epoch 13/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 113s 5ms/step - accuracy: 0.5096 - loss: 0.9661 
+Epoch 14/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 112s 5ms/step - accuracy: 0.5118 - loss: 0.9637 
+Epoch 15/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.5130 - loss: 0.9622 
+Epoch 16/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 117s 6ms/step - accuracy: 0.5143 - loss: 0.9603 
+Epoch 17/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 115s 5ms/step - accuracy: 0.5162 - loss: 0.9577 
+Epoch 18/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 117s 6ms/step - accuracy: 0.5176 - loss: 0.9566  
+Epoch 19/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 113s 5ms/step - accuracy: 0.5197 - loss: 0.9541 
+Epoch 20/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 121s 6ms/step - accuracy: 0.5192 - loss: 0.9540 
+Epoch 21/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 115s 5ms/step - accuracy: 0.5213 - loss: 0.9511 
+Epoch 22/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 114s 5ms/step - accuracy: 0.5222 - loss: 0.9502 
+Epoch 23/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 111s 5ms/step - accuracy: 0.5233 - loss: 0.9490 
+Epoch 24/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.5244 - loss: 0.9476 
+Epoch 25/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.5244 - loss: 0.9471 
+Epoch 26/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.5253 - loss: 0.9456 
+Epoch 27/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 112s 5ms/step - accuracy: 0.5260 - loss: 0.9448 
+Epoch 28/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 115s 5ms/step - accuracy: 0.5259 - loss: 0.9439  
+Epoch 29/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 118s 6ms/step - accuracy: 0.5276 - loss: 0.9426 
+Epoch 30/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 113s 5ms/step - accuracy: 0.5275 - loss: 0.9419 
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+Saved trained model to models/v2/model_TxCnt.h5
+Testing LSTM model on concatenated test sets...
+Accuracy: 0.5455
+Classification report:
+              precision    recall  f1-score   support
+
+          -1       0.45      0.27      0.34     84053
+           0       0.58      0.84      0.69    174409
+           1       0.42      0.18      0.26     79542
+
+    accuracy                           0.55    338004
+   macro avg       0.48      0.43      0.43    338004
+weighted avg       0.51      0.55      0.50    338004
+
+
+Dummy classifier baseline:
+Dummy Accuracy: 0.3518
+              precision    recall  f1-score   support
+
+          -1       0.25      0.30      0.27     84053
+           0       0.52      0.40      0.45    174409
+           1       0.24      0.30      0.26     79542
+
+    accuracy                           0.35    338004
+   macro avg       0.33      0.33      0.33    338004
+weighted avg       0.38      0.35      0.36    338004
+
+
+=== Training LSTM model with Bitcoin feature: FeeMean ===
+Combined DataFrame preview with Bitcoin feature 'FeeMean':
+Label counts before split:
+  -1: 494041
+   0: 717139
+   1: 482574
+Training samples: 1355003, Testing samples: 338751
+Number of coins: 391
+Training LSTM model...
+Epoch 1/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 117s 5ms/step - accuracy: 0.4379 - loss: 1.0513  
+Epoch 2/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 113s 5ms/step - accuracy: 0.4572 - loss: 1.0296 
+Epoch 3/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 111s 5ms/step - accuracy: 0.4651 - loss: 1.0219 
+Epoch 4/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 119s 6ms/step - accuracy: 0.4711 - loss: 1.0154 
+Epoch 5/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 113s 5ms/step - accuracy: 0.4753 - loss: 1.0097 
+Epoch 6/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 117s 6ms/step - accuracy: 0.4809 - loss: 1.0043 
+Epoch 7/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 113s 5ms/step - accuracy: 0.4832 - loss: 1.0013 
+Epoch 8/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 111s 5ms/step - accuracy: 0.4857 - loss: 0.9973 
+Epoch 9/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 111s 5ms/step - accuracy: 0.4885 - loss: 0.9938 
+Epoch 10/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 113s 5ms/step - accuracy: 0.4901 - loss: 0.9912 
+Epoch 11/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 114s 5ms/step - accuracy: 0.4918 - loss: 0.9889 
+Epoch 12/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 114s 5ms/step - accuracy: 0.4933 - loss: 0.9875  
+Epoch 13/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 114s 5ms/step - accuracy: 0.4945 - loss: 0.9858 
+Epoch 14/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 113s 5ms/step - accuracy: 0.4955 - loss: 0.9841  
+Epoch 15/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 116s 5ms/step - accuracy: 0.4965 - loss: 0.9828 
+Epoch 16/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 111s 5ms/step - accuracy: 0.4963 - loss: 0.9818 
+Epoch 17/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 114s 5ms/step - accuracy: 0.4981 - loss: 0.9802 
+Epoch 18/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 115s 5ms/step - accuracy: 0.4995 - loss: 0.9794 
+Epoch 19/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 115s 5ms/step - accuracy: 0.4998 - loss: 0.9780 
+Epoch 20/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 120s 6ms/step - accuracy: 0.4998 - loss: 0.9780 
+Epoch 21/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 120s 6ms/step - accuracy: 0.5005 - loss: 0.9770 
+Epoch 22/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 120s 6ms/step - accuracy: 0.5013 - loss: 0.9763  
+Epoch 23/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 114s 5ms/step - accuracy: 0.5017 - loss: 0.9758 
+Epoch 24/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 111s 5ms/step - accuracy: 0.5011 - loss: 0.9756  
+Epoch 25/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 112s 5ms/step - accuracy: 0.5024 - loss: 0.9745 
+Epoch 26/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 114s 5ms/step - accuracy: 0.5032 - loss: 0.9740 
+Epoch 27/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 113s 5ms/step - accuracy: 0.5026 - loss: 0.9740 
+Epoch 28/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 115s 5ms/step - accuracy: 0.5021 - loss: 0.9740 
+Epoch 29/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 113s 5ms/step - accuracy: 0.5033 - loss: 0.9726  
+Epoch 30/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 114s 5ms/step - accuracy: 0.5037 - loss: 0.9720 
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+Saved trained model to models/v2/model_FeeMean.h5
+Testing LSTM model on concatenated test sets...
+Accuracy: 0.5431
+Classification report:
+              precision    recall  f1-score   support
+
+          -1       0.42      0.28      0.34     84053
+           0       0.58      0.86      0.69    174409
+           1       0.46      0.13      0.20     79542
+
+    accuracy                           0.54    338004
+   macro avg       0.49      0.42      0.41    338004
+weighted avg       0.51      0.54      0.49    338004
+
+
+Dummy classifier baseline:
+Dummy Accuracy: 0.3518
+              precision    recall  f1-score   support
+
+          -1       0.25      0.30      0.27     84053
+           0       0.52      0.40      0.45    174409
+           1       0.24      0.30      0.26     79542
+
+    accuracy                           0.35    338004
+   macro avg       0.33      0.33      0.33    338004
+weighted avg       0.38      0.35      0.36    338004
+
+
+=== Training LSTM model with Bitcoin feature: HashRate ===
+Combined DataFrame preview with Bitcoin feature 'HashRate':
+Label counts before split:
+  -1: 494041
+   0: 717139
+   1: 482574
+Training samples: 1355003, Testing samples: 338751
+Number of coins: 391
+Training LSTM model...
+Epoch 1/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.4352 - loss: 1.0523  
+Epoch 2/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.4567 - loss: 1.0298 
+Epoch 3/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 111s 5ms/step - accuracy: 0.4655 - loss: 1.0217  
+Epoch 4/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.4714 - loss: 1.0145 
+Epoch 5/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.4761 - loss: 1.0089 
+Epoch 6/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 111s 5ms/step - accuracy: 0.4810 - loss: 1.0029 
+Epoch 7/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.4849 - loss: 0.9983 
+Epoch 8/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 111s 5ms/step - accuracy: 0.4890 - loss: 0.9935 
+Epoch 9/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.4903 - loss: 0.9903 
+Epoch 10/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 111s 5ms/step - accuracy: 0.4930 - loss: 0.9872 
+Epoch 11/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.4948 - loss: 0.9852 
+Epoch 12/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 109s 5ms/step - accuracy: 0.4970 - loss: 0.9816 
+Epoch 13/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 113s 5ms/step - accuracy: 0.4986 - loss: 0.9797 
+Epoch 14/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 115s 5ms/step - accuracy: 0.4989 - loss: 0.9786 
+Epoch 15/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 115s 5ms/step - accuracy: 0.5005 - loss: 0.9765 
+Epoch 16/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 113s 5ms/step - accuracy: 0.5013 - loss: 0.9757 
+Epoch 17/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 114s 5ms/step - accuracy: 0.5034 - loss: 0.9731 
+Epoch 18/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 116s 6ms/step - accuracy: 0.5034 - loss: 0.9722 
+Epoch 19/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 114s 5ms/step - accuracy: 0.5041 - loss: 0.9710 
+Epoch 20/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 113s 5ms/step - accuracy: 0.5055 - loss: 0.9698 
+Epoch 21/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 113s 5ms/step - accuracy: 0.5065 - loss: 0.9687 
+Epoch 22/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 112s 5ms/step - accuracy: 0.5060 - loss: 0.9684 
+Epoch 23/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 112s 5ms/step - accuracy: 0.5071 - loss: 0.9671  
+Epoch 24/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 112s 5ms/step - accuracy: 0.5094 - loss: 0.9650 
+Epoch 25/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 113s 5ms/step - accuracy: 0.5087 - loss: 0.9658 
+Epoch 26/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 111s 5ms/step - accuracy: 0.5086 - loss: 0.9652 
+Epoch 27/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 112s 5ms/step - accuracy: 0.5096 - loss: 0.9638 
+Epoch 28/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 112s 5ms/step - accuracy: 0.5096 - loss: 0.9637 
+Epoch 29/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 126s 6ms/step - accuracy: 0.5116 - loss: 0.9617 
+Epoch 30/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 113s 5ms/step - accuracy: 0.5111 - loss: 0.9620 
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+Saved trained model to models/v2/model_HashRate.h5
+Testing LSTM model on concatenated test sets...
+Accuracy: 0.5194
+Classification report:
+              precision    recall  f1-score   support
+
+          -1       0.37      0.40      0.39     84053
+           0       0.59      0.74      0.66    174409
+           1       0.43      0.15      0.23     79542
+
+    accuracy                           0.52    338004
+   macro avg       0.46      0.43      0.42    338004
+weighted avg       0.50      0.52      0.49    338004
+
+
+Dummy classifier baseline:
+Dummy Accuracy: 0.3518
+              precision    recall  f1-score   support
+
+          -1       0.25      0.30      0.27     84053
+           0       0.52      0.40      0.45    174409
+           1       0.24      0.30      0.26     79542
+
+    accuracy                           0.35    338004
+   macro avg       0.33      0.33      0.33    338004
+weighted avg       0.38      0.35      0.36    338004
+
+
+=== Training LSTM model with Bitcoin feature: GoogleTrends ===
+Combined DataFrame preview with Bitcoin feature 'GoogleTrends':
+Label counts before split:
+  -1: 494041
+   0: 717139
+   1: 482574
+Training samples: 1355003, Testing samples: 338751
+Number of coins: 391
+Training LSTM model...
+Epoch 1/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 116s 5ms/step - accuracy: 0.4375 - loss: 1.0522  
+Epoch 2/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 111s 5ms/step - accuracy: 0.4592 - loss: 1.0278  
+Epoch 3/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.4662 - loss: 1.0200  
+Epoch 4/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.4759 - loss: 1.0104 
+Epoch 5/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 114s 5ms/step - accuracy: 0.4824 - loss: 1.0021 
+Epoch 6/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 114s 5ms/step - accuracy: 0.4885 - loss: 0.9951  
+Epoch 7/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 115s 5ms/step - accuracy: 0.4940 - loss: 0.9882 
+Epoch 8/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 114s 5ms/step - accuracy: 0.4972 - loss: 0.9833 
+Epoch 9/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 114s 5ms/step - accuracy: 0.5010 - loss: 0.9779  
+Epoch 10/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 113s 5ms/step - accuracy: 0.5038 - loss: 0.9743 
+Epoch 11/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 115s 5ms/step - accuracy: 0.5055 - loss: 0.9712 
+Epoch 12/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 124s 6ms/step - accuracy: 0.5081 - loss: 0.9682 
+Epoch 13/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 118s 6ms/step - accuracy: 0.5090 - loss: 0.9661 
+Epoch 14/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 113s 5ms/step - accuracy: 0.5112 - loss: 0.9637 
+Epoch 15/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 111s 5ms/step - accuracy: 0.5133 - loss: 0.9613 
+Epoch 16/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 108s 5ms/step - accuracy: 0.5151 - loss: 0.9591 
+Epoch 17/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 108s 5ms/step - accuracy: 0.5154 - loss: 0.9578 
+Epoch 18/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.5161 - loss: 0.9563 
+Epoch 19/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.5181 - loss: 0.9546 
+Epoch 20/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 112s 5ms/step - accuracy: 0.5191 - loss: 0.9533 
+Epoch 21/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 111s 5ms/step - accuracy: 0.5195 - loss: 0.9519 
+Epoch 22/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 111s 5ms/step - accuracy: 0.5207 - loss: 0.9507 
+Epoch 23/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.5215 - loss: 0.9499  
+Epoch 24/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.5215 - loss: 0.9490 
+Epoch 25/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 110s 5ms/step - accuracy: 0.5231 - loss: 0.9477 
+Epoch 26/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 109s 5ms/step - accuracy: 0.5238 - loss: 0.9467 
+Epoch 27/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 108s 5ms/step - accuracy: 0.5248 - loss: 0.9457 
+Epoch 28/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 109s 5ms/step - accuracy: 0.5242 - loss: 0.9452 
+Epoch 29/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 111s 5ms/step - accuracy: 0.5253 - loss: 0.9443  
+Epoch 30/30
+21113/21113 ━━━━━━━━━━━━━━━━━━━━ 108s 5ms/step - accuracy: 0.5256 - loss: 0.9437 
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+Saved trained model to models/v2/model_GoogleTrends.h5
+Testing LSTM model on concatenated test sets...
+Accuracy: 0.5480
+Classification report:
+              precision    recall  f1-score   support
+
+          -1       0.45      0.27      0.34     84053
+           0       0.58      0.86      0.69    174409
+           1       0.44      0.16      0.23     79542
+
+    accuracy                           0.55    338004
+   macro avg       0.49      0.43      0.42    338004
+weighted avg       0.52      0.55      0.50    338004
+
+
+Dummy classifier baseline:
+Dummy Accuracy: 0.3518
+              precision    recall  f1-score   support
+
+          -1       0.25      0.30      0.27     84053
+           0       0.52      0.40      0.45    174409
+           1       0.24      0.30      0.26     79542
+
+    accuracy                           0.35    338004
+   macro avg       0.33      0.33      0.33    338004
+weighted avg       0.38      0.35      0.36    338004
+

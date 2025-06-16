@@ -1,0 +1,23 @@
+.venv/
+env/
+
+# Ignore Jupyter notebooks
+*.ipynb_checkpoints
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore large data files
+*.csv
+*.h5
+*.zip
+
+# Ignore logs
+*.log
+
+# Ignore VSCode settings
+.vscode/
+
+# Ignore any file named `secrets.py`
+secrets.py

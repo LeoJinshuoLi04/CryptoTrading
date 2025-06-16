@@ -1,0 +1,17 @@
+Accuracy: 0.3438
+Classification Report:
+              precision    recall  f1-score   support
+
+          -1       0.30      0.34      0.32       262
+           0       0.50      0.35      0.41       472
+           1       0.24      0.34      0.28       255
+
+    accuracy                           0.34       989
+   macro avg       0.35      0.34      0.34       989
+weighted avg       0.38      0.34      0.35       989
+
+Confusion Matrix:
+89 76 97
+125 165 182
+81 88 86
+final profit and loss: $8759.71
